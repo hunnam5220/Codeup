@@ -6,7 +6,7 @@ def find_multiple_js(n):
     d_num = int(format(b_num, "b"), 10)
 
     while 1:
-        if d_num % n == 0 :
+        if d_num % n == 0:
             return d_num
         b_num += 1
         d_num = int(format(b_num, "b"), 10)
