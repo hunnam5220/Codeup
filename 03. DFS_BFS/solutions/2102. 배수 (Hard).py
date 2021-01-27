@@ -1,18 +1,19 @@
-n = int(input())
+from sys import stdin
 
 
-def find_multiple_js(n):
-    b_num = 0b1
-    d_num = int(format(b_num, "b"), 10)
+def functions(n):
+    b_num = 1
+    d_num = int(bin(b_num)[2:])
 
-    while 1:
+    while True:
         if d_num % n == 0:
             return d_num
+
         b_num += 1
-        d_num = int(format(b_num, "b"), 10)
+        d_num = int(bin(b_num)[2:])
 
         if d_num >= 100000000000000000000:
             return 0
 
 
-print(find_multiple_js(n))
+print(functions(int(stdin.readline().rstrip())))
